@@ -13,7 +13,7 @@ var database = firebase.database();
 
 //sample ajax call on our firebase database
 $.ajax({
-	url: "https://aardvark-college-debt.firebaseio.com/income-by-major/area, ethnic, and civilization studies/static-median-income/year25.json",
+	url: "https://aardvark-college-debt.firebaseio.com/income-by-major/Area, Ethnic, and Civilization Studies/static-median-income/year25.json",
 	method: "GET"
 }).done(function(response) {
 	console.log(response)
