@@ -11,14 +11,13 @@
 
 var database = firebase.database();
 
+//sample ajax call on our firebase database
 $.ajax({
 	url: "https://aardvark-college-debt.firebaseio.com/income-by-major/area, ethnic, and civilization studies/static-median-income/year25.json",
 	method: "GET"
 }).done(function(response) {
 	console.log(response)
 });
-
-$('small').text("fun");
 
 database.ref("income-by-major").once("value").then(function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
@@ -27,6 +26,19 @@ database.ref("income-by-major").once("value").then(function(snapshot) {
     var linkForItem = $('<a>').addClass('majorChosen').attr('href', '#').text(key);
     listItem.append(linkForItem);
     $('#majorDropdown').append(listItem);
-    console.log(key);
+  });
+  $('.majorChosen').on('click', function(event) {
+    event.preventDefault();
+    var major = $(this).text();
+    console.log(major);
+
+    $('#majorFill').text(major);
   });
 });
+
+$('.college').on('click', function() {
+  var currentCollege = $(this).text();
+  var logo = $("<img>").attr('src', 'https://logo.clearbit.com/' + currentCollege + '.edu');
+  $('#logo').html(logo);
+});
+

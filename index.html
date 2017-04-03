@@ -8,10 +8,10 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-6">
 				<!-- Split button -->
 				<div class="btn-group">
-				  <button type="button" class="btn btn-primary">Choose your Major</button>
+				  <button type="button" class="btn btn-primary" id="majorFill">Choose your Major</button>
 				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    <span class="caret"></span>
 				    <span class="sr-only">Toggle Dropdown</span>
@@ -21,12 +21,27 @@
 				  </ul>
 				</div>
 			</div>
+
+			<div class="col-sm-6">
+				<!-- Single button -->
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    What College <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a class="college" href="#">duke</a></li>
+				    <li><a class="college" href="#">ucla</a></li>
+				    <li><a class="college" href="#">unc</a></li>
+				  </ul>
+				</div>
+			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="page-header">
-				  <h1>Example page header <small id="small">Subtext for header</small></h1>
+				  <h1>College Logo <small id="small">If we want to use it</small></h1>
+				  <p id="logo"></p>
 				</div>
 			</div>
 		</div>
